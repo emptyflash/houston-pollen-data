@@ -28,5 +28,6 @@ all_data = [(m, y, t)
              for y in years 
              for t in data_types] 
 
-for month, year, data_type in tqdm(all_data):
-    download(month, year, data_type)
+if __name__ == "__main__":
+    for month, year, data_type in tqdm(all_data):
+        download(month, year, data_type)
